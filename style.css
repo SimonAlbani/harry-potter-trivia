@@ -1,0 +1,9 @@
+@font-face {
+    font-family: HarryPotter;
+    src: url(HARRYP__.TTF);
+}
+h1 {
+    font-family: HarryPotter;
+    text-align: center;
+    font-size: 48px;
+}
