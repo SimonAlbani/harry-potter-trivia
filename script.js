@@ -1,15 +1,15 @@
 (function() {
-  function myFunction() {
+  function greet() {
     var txt;
-    var person = prompt("Please enter your name:", "name");
+    var person = prompt("Please enter your name:", "");
     if (person == null || person == "") {
-      txt = "User cancelled the prompt.";
+      txt = "Enjoy the game!";
     } else {
       txt = "Hello " + person + ", enjoy the game!";
     }
     document.getElementById("name").innerHTML = txt;
   }
-  myFunction();
+  greet();
   const myQuestions = [
     {
       question: "Which house does Harry Potter belong to?",
@@ -116,7 +116,6 @@
   function buildTrivia() {
     const output = [];
 
-    // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
       const answers = [];
 

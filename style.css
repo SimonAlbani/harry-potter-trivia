@@ -5,16 +5,16 @@
 
 @-webkit-keyframes rainbow {
   20% {
-    color: red;
+    color: rgb(116, 0, 1);
   }
   60% {
-    color: green;
+    color: rgb(42, 133, 57);
   }
   80% {
-    color: blue;
+    color: rgb(34, 47, 91);
   }
   100% {
-    color: orange;
+    color: rgb(236, 185, 57);
   }
 }
 
@@ -38,6 +38,10 @@ header {
   background-color: rgba(0, 0, 0, 0.35);
   font-family: HarryPotter;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
 }
 
 h1 {
@@ -53,11 +57,18 @@ h2 {
   font-weight: 7;
 }
 
+span {
+  font-family: HarryPotter;
+  font-size: 20px;
+  font-weight: 7;
+}
+
 body {
   font-size: 20px;
   font-family: sans-serif;
   color: white;
   background-color: black;
+  width: 100%;
 }
 
 .question {
@@ -89,7 +100,7 @@ button:hover {
 }
 
 label:hover {
-  color: rgb(42, 133, 57);
+  color: rgb(34, 47, 91);
 }
 
 i:hover {
@@ -122,10 +133,86 @@ i:hover {
   background-image: url(hogwartsBackground.jpg);
   background-size: cover;
   height: auto;
+  width: auto;
+  background-position: 99%;
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0.35);
   height: 50px;
   text-align: center;
+  margin: 100px 0px 0px 0px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.social {
+  letter-spacing: 2.5px;
+  font-size: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* min-width: 160px; */
+  width: 800px;
+  z-index: 3;
+  padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-size: 15px;
+  background-color: rgba(236, 185, 57, 1);
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    display: none;
+  }
+
+  .background {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  body {
+    font-size: 15px;
+    width: auto;
+  }
+
+  button {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    margin: 50px 0px 0px 0px;
+  }
+
+  #results {
+    text-align: center;
+  }
 }

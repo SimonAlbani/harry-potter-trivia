@@ -15,16 +15,24 @@
     <div class="background">
         <header>
             <h1>Harry Potter Trivia</h1>
-            <h2 id="name" onload="myFunction()"></h2>
+            <h2 id="name" onload="greet()">Enjoy the game!</h2>
         </header>
+        <div class="dropdown">
+            <span>Instructions</span>
+            <div class="dropdown-content">
+                <p>Answer each question. Once you have answered all the questions click the submit button. you can slide between
+                    the different questions to see which ones you got correct or wrong.</p>
+            </div>
+        </div>
         <div class="trivia-container">
             <div id="trivia"></div>
         </div>
-        <button id="previous">Previous Question</button>
-        <button id="next">Next Question</button>
-        <button id="submit">Submit</button>
-        <div id="results"></div>
-
+        <div class="buttons">
+            <button id="previous">Previous Question</button>
+            <button id="next">Next Question</button>
+            <button id="submit">Submit</button>
+            <div id="results"></div>
+        </div>
 
         <footer>
             <div class="name"> © Simon Albani</div>
