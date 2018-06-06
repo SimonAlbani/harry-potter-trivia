@@ -7,11 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ϟHarry Potter Trivia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="background">
+        <header>
+            <h1>Harry Potter Trivia</h1>
+            <h2 id="name" onload="myFunction()"></h2>
+        </header>
+        <div class="trivia-container">
+            <div id="trivia"></div>
+        </div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit</button>
+        <div id="results"></div>
 
-    <h1>Harry Potter Trivia</h1>
+
+        <footer>
+            <div class="name"> © Simon Albani</div>
+            <div class="social">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-snapchat-square"></i>
+            </div>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 
