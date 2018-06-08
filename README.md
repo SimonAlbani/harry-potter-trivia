@@ -15,7 +15,9 @@ Inline-style:
 #How to use
 
 1.  Once the page loads click on the Lumos button to load the game
+    ![lumos screenshot](/img/lumosImage.PNG)
 2.  Pick a theme (optional)
+    ![theme screenshot](/img/themeImage.PNG)
 3.  Click an answer to the question
 4.  Click on the Next Question button to be able to answer the remaining questions
 5.  You can change previous answer by clicking on the Previous question button
