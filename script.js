@@ -232,13 +232,15 @@
   const triviaContainer = document.getElementById("trivia");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
+
+  buildTrivia();
+
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
   const slides = document.querySelectorAll(".slide");
   const lumosButton = document.querySelector("#lumos");
   let currentSlide = 0;
-  
-  buildTrivia();
+
   showSlide(0);
 
   function lumos() {
