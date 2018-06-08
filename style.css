@@ -1,6 +1,12 @@
 @font-face {
-  font-family: HarryPotter;
-  src: url(HARRYP__.TTF);
+  font-family: harryPotter;
+  src: url(fonts/HARRYP__.TTF);
+}
+
+@font-face {
+  font-family: lumosMaxima;
+  src: url(fonts/Hogww___.ttf);
+  font-weight: bold;
 }
 
 @-webkit-keyframes rainbow {
@@ -36,7 +42,7 @@
 
 header {
   background-color: rgba(0, 0, 0, 0.35);
-  font-family: HarryPotter;
+  font-family: harryPotter;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -52,20 +58,14 @@ h1 {
   font-weight: 7;
 }
 
-h2 {
-  font-size: 25px;
-  font-weight: 7;
-}
-
-span {
-  font-family: HarryPotter;
-  font-size: 20px;
+h2,
+h1 {
   font-weight: 7;
 }
 
 body {
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: lumosMaxima;
   color: white;
   background-color: black;
   width: 100%;
@@ -75,18 +75,15 @@ body {
   font-weight: 600;
 }
 
-.answers {
+.answers label {
+  display: block;
   margin-bottom: 20px;
 }
 
-.answers label {
-  display: block;
-}
-
 button {
-  font-family: sans-serif;
+  font-family: lumosMaxima;
   font-size: 20px;
-  background-color: rgb(236, 185, 57);
+  background-color: rgb(116, 0, 1);
   color: #fff;
   border: 0px;
   border-radius: 3px;
@@ -96,11 +93,11 @@ button {
 }
 
 button:hover {
-  background-color: rgb(116, 0, 1);
+  background-color: rgb(236, 185, 57);
 }
 
 label:hover {
-  color: rgb(34, 47, 91);
+  color: grey;
 }
 
 i:hover {
@@ -110,8 +107,6 @@ i:hover {
 
 .slide {
   position: absolute;
-  left: 0px;
-  top: 0px;
   width: 100%;
   z-index: 1;
   opacity: 0;
@@ -129,21 +124,13 @@ i:hover {
   margin: 40px 0px 0px 10px;
 }
 
-.background {
-  background-image: url(hogwartsBackground.jpg);
-  background-size: cover;
-  height: auto;
-  width: auto;
-  background-position: 99%;
-}
-
 footer {
   background-color: rgba(0, 0, 0, 0.35);
   height: 50px;
   text-align: center;
-  margin: 100px 0px 0px 0px;
   font-size: 15px;
   padding: 10px;
+  margin: 10px 0px 0px 0px;
 }
 
 .social {
@@ -151,16 +138,12 @@ footer {
   font-size: 20px;
 }
 
-.dropdown {
+.dropdown-content {
   position: relative;
   display: inline-block;
-}
-
-.dropdown-content {
   display: none;
   position: absolute;
-  /* min-width: 160px; */
-  width: 800px;
+  width: 500px;
   z-index: 3;
   padding: 12px 16px;
 }
@@ -170,6 +153,160 @@ footer {
   font-size: 15px;
   background-color: rgba(236, 185, 57, 1);
   padding: 10px;
+}
+
+.background {
+  background-image: url(img/hogwartsBackground.jpg);
+  background-position: 99%;
+}
+
+.dobby {
+  background-image: url(img/dobby.png);
+  background-position: 99%;
+}
+
+.gryffindor {
+  background-image: url(img/gryffindor.jpg);
+  background-position: 1%;
+}
+
+.hufflepuff {
+  background-image: url(img/hufflepuff.jpg);
+  background-position: 1%;
+}
+
+.slytherin {
+  background-image: url(img/slytherin.jpg);
+  background-position: 1%;
+}
+
+.ravenclaw {
+  background-image: url(img/ravenclaw.jpg);
+  background-position: 1%;
+}
+
+.win {
+  background-image: url(img/winner.gif);
+  background-position: 50%;
+}
+
+.loose {
+  background-image: url(img/giphy.gif);
+  background-position: 50%;
+}
+
+.ravenclaw,
+.slytherin,
+.hufflepuff,
+.gryffindor,
+.dobby,
+.win,
+.loose,
+.background {
+  background-size: cover;
+  height: auto;
+  width: auto;
+}
+
+#results {
+  background-color: green;
+}
+
+#hogwarts,
+#dobby,
+#ravenclaw,
+#slytherin,
+#hufflepuff,
+#gryffindor {
+  font-size: 15px;
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0px 0px 20px 0px;
+}
+
+#hogwarts {
+  background-color: rgba(45, 0, 77, 0.5);
+}
+
+#hogwarts:hover {
+  background-color: rgba(45, 0, 77, 1);
+}
+
+#dobby {
+  background-color: rgba(66, 66, 66, 0.5);
+}
+
+#dobby:hover {
+  background-color: rgba(66, 66, 66, 1);
+}
+
+#ravenclaw {
+  background-color: rgba(34, 47, 91, 0.5);
+}
+
+#ravenclaw:hover {
+  background-color: rgba(34, 47, 91, 1);
+}
+
+#slytherin {
+  background-color: rgba(42, 133, 57, 0.5);
+}
+
+#slytherin:hover {
+  background-color: rgba(42, 133, 57, 1);
+}
+
+#hufflepuff {
+  background-color: rgba(236, 185, 57, 0.5);
+}
+
+#hufflepuff:hover {
+  background-color: rgba(236, 185, 57, 1);
+}
+
+#gryffindor {
+  background-color: rgba(116, 0, 1, 0.5);
+}
+
+#gryffindor:hover {
+  background-color: rgba(116, 0, 1, 1);
+}
+
+.lumos {
+  display: flex;
+  justify-content: center;
+}
+
+#lumos {
+  background-color: black;
+  border: solid white 2px;
+  margin-top: 250px;
+  padding: 50px;
+  font-size: 30px;
+}
+
+#lumos:hover {
+  background-color: white;
+  transition: background-color 2s;
+  border: solid black 2px;
+  color: black;
+  transition: color 2s;
+}
+
+#begin {
+  display: none;
+}
+
+#appear {
+  display: block;
+  transition-property: all;
+  transition-duration: 5s;
+}
+
+#background {
+  transition-property: all;
+  transition-duration: 2s;
 }
 
 @media screen and (max-width: 480px) {
@@ -193,26 +330,36 @@ footer {
   }
 
   button {
-    font-family: sans-serif;
     font-size: 15px;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
     padding: 5px;
-    cursor: pointer;
     margin: 10px;
   }
 
   .buttons {
     display: flex;
-    flex-direction: column;
-  }
-
-  footer {
-    margin: 50px 0px 0px 0px;
+    flex-direction: column-reverse;
   }
 
   #results {
     text-align: center;
+  }
+
+  .dropdown-content {
+    width: auto;
+  }
+
+  .background,
+  .win,
+  .loose {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .ravenclaw,
+  .slytherin,
+  .hufflepuff,
+  .gryffindor {
+    background-size: cover;
+    background-position: 50%;
   }
 }

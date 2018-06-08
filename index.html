@@ -12,37 +12,59 @@
 </head>
 
 <body>
-    <div class="background">
-        <header>
-            <h1>Harry Potter Trivia</h1>
-            <h2 id="name" onload="greet()">Enjoy the game!</h2>
-        </header>
-        <div class="dropdown">
-            <span>Instructions</span>
-            <div class="dropdown-content">
-                <p>Answer each question. Once you have answered all the questions click the submit button. you can slide between
-                    the different questions to see which ones you got correct or wrong.</p>
+    <div class="lumos">
+        <button id="lumos">LUMOS!</button>
+        <audio id="lumosMaxima" src="audio/lumosmaxima.mp3"></audio>
+    </div>
+    <div id="begin">
+        <div class="background" id="background">
+            <header>
+                <h1>Harry Potter Trivia</h1>
+                <h2>Pick a theme!</h2>
+                <div class="themes">
+                    <button id="gryffindor">Gryffindor</button>
+                    <audio class="gryffindor" src="audio/gryffindor.wav"></audio>
+                    <button id="hufflepuff">Hufflepuff</button>
+                    <audio class="hufflepuff" src="audio/hufflepuff.wav"></audio>
+                    <button id="slytherin">Slytherin</button>
+                    <audio class="slytherin" src="audio/slytherin.wav"></audio>
+                    <button id="ravenclaw">Ravenclaw</button>
+                    <audio class="ravenclaw" src="audio/ravenclaw.wav"></audio>
+                    <button id="dobby">Dobby</button>
+                    <audio class="dobby" src="audio/Hello.mp3"></audio>
+                    <button id="hogwarts">Hogwarts</button>
+                    <audio class="hogwarts" src="audio/wizard_harry.wav"></audio>
+                </div>
+            </header>
+            <div class="dropdown">
+                <span>Instructions</span>
+                <div class="dropdown-content">
+                    <p>Answer each question. Once you have answered all the questions click the submit button. you can slide
+                        between the different questions to see which ones you got correct or wrong. Chage the theme by pressing
+                        the buttons above!
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="trivia-container">
-            <div id="trivia"></div>
-        </div>
-        <div class="buttons">
-            <button id="previous">Previous Question</button>
-            <button id="next">Next Question</button>
-            <button id="submit">Submit</button>
-            <div id="results"></div>
-        </div>
-
-        <footer>
-            <div class="name"> © Simon Albani</div>
-            <div class="social">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-snapchat-square"></i>
+            <div class="trivia-container">
+                <div id="trivia"></div>
             </div>
-        </footer>
+            <div class="buttons">
+                <button id="previous">☚ Previous Question</button>
+                <button id="next">Next Question ☛</button>
+                <button id="submit">Submit</button>
+                <audio id="mischief" src="audio/mischief.mp3"></audio>
+                <div id="results"></div>
+            </div>
+            <footer>
+                <div class="name"> © Simon Albani</div>
+                <div class="social">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-snapchat-square"></i>
+                </div>
+            </footer>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

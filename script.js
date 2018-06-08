@@ -1,15 +1,4 @@
 (function() {
-  function greet() {
-    var txt;
-    var person = prompt("Please enter your name:", "");
-    if (person == null || person == "") {
-      txt = "Enjoy the game!";
-    } else {
-      txt = "Hello " + person + ", enjoy the game!";
-    }
-    document.getElementById("name").innerHTML = txt;
-  }
-  greet();
   const myQuestions = [
     {
       question: "Which house does Harry Potter belong to?",
@@ -26,7 +15,7 @@
       answers: {
         a: "Dobby",
         b: "Winky",
-        c: "Headwig",
+        c: "Hedwig",
         d: "Scabbers"
       },
       correctAnswer: "c"
@@ -52,10 +41,10 @@
       correctAnswer: "a"
     },
     {
-      question: "Who is he headmaster of Hogwarts?",
+      question: "Who is the headmaster of Hogwarts?",
       answers: {
-        a: "McGonagal",
-        b: "Snape",
+        a: "Nearly Headless Nick",
+        b: "Peeves",
         c: "Hagrid",
         d: "Dumbledore"
       },
@@ -112,6 +101,48 @@
       correctAnswer: "c"
     }
   ];
+  let background = document.querySelector("#background");
+  function dobby() {
+    document.querySelector(".dobby").play();
+    background.setAttribute("class", "dobby");
+  }
+  let dobbyButton = document.querySelector("#dobby");
+  dobbyButton.addEventListener("click", dobby);
+
+  function gryffindor() {
+    document.querySelector(".gryffindor").play();
+    background.setAttribute("class", "gryffindor");
+  }
+  let gryffindorButton = document.querySelector("#gryffindor");
+  gryffindorButton.addEventListener("click", gryffindor);
+
+  function hufflepuff() {
+    document.querySelector(".hufflepuff").play();
+    background.setAttribute("class", "hufflepuff");
+  }
+  let hufflepuffButton = document.querySelector("#hufflepuff");
+  hufflepuffButton.addEventListener("click", hufflepuff);
+
+  function slytherin() {
+    document.querySelector(".slytherin").play();
+    background.setAttribute("class", "slytherin");
+  }
+  let slytherinButton = document.querySelector("#slytherin");
+  slytherinButton.addEventListener("click", slytherin);
+
+  function ravenclaw() {
+    document.querySelector(".ravenclaw").play();
+    background.setAttribute("class", "ravenclaw");
+  }
+  let ravenclawButton = document.querySelector("#ravenclaw");
+  ravenclawButton.addEventListener("click", ravenclaw);
+
+  function hogwarts() {
+    document.querySelector(".hogwarts").play();
+    background.setAttribute("class", "background");
+  }
+  let hogwartsButton = document.querySelector("#hogwarts");
+  hogwartsButton.addEventListener("click", hogwarts);
 
   function buildTrivia() {
     const output = [];
@@ -142,9 +173,8 @@
 
   function showResults() {
     const answerContainers = triviaContainer.querySelectorAll(".answers");
-
     let numCorrect = 0;
-
+    document.querySelector("#mischief").play();
     myQuestions.forEach((currentQuestion, questionNumber) => {
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
@@ -162,6 +192,13 @@
     resultsContainer.innerHTML = `${numCorrect} out of ${
       myQuestions.length
     } correct`;
+    if (numCorrect >= 8) {
+      background.setAttribute("class", "win");
+      resultsContainer.style.backgroundColor = "rgba(42, 133, 57, .75)";
+    } else {
+      background.setAttribute("class", "loose");
+      resultsContainer.style.backgroundColor = "rgba(190, 16, 16, .75)";
+    }
   }
 
   function showSlide(n) {
@@ -195,17 +232,28 @@
   const triviaContainer = document.getElementById("trivia");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
-
-  buildTrivia();
-
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
   const slides = document.querySelectorAll(".slide");
+  const lumosButton = document.querySelector("#lumos");
   let currentSlide = 0;
-
+  
+  buildTrivia();
   showSlide(0);
+
+  function lumos() {
+    setTimeout(function() {
+      lumosButton.style.display = "none";
+      document.querySelector("#begin").setAttribute("id", "appear");
+    }, 2500);
+  }
+  function music() {
+    document.querySelector("#lumosMaxima").play();
+  }
 
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
+  lumosButton.addEventListener("click", lumos);
+  lumosButton.addEventListener("click", music);
 })();
