@@ -1,11 +1,11 @@
 @font-face {
   font-family: harryPotter;
-  src: url(fonts/HARRYP__.TTF);
+  src: url(../fonts/HARRYP__.TTF);
 }
 
 @font-face {
   font-family: lumosMaxima;
-  src: url(fonts/Hogww___.ttf);
+  src: url(../fonts/Hogww___.ttf);
   font-weight: bold;
 }
 
@@ -155,42 +155,42 @@ footer {
 }
 
 .background {
-  background-image: url(img/hogwartsBackground.jpg);
+  background-image: url(../img/hogwartsBackground.jpg);
   background-position: 99%;
 }
 
 .dobby {
-  background-image: url(img/dobby.png);
+  background-image: url(../img/dobby.png);
   background-position: 99%;
 }
 
 .gryffindor {
-  background-image: url(img/gryffindor.jpg);
+  background-image: url(../img/gryffindor.jpg);
   background-position: 1%;
 }
 
 .hufflepuff {
-  background-image: url(img/hufflepuff.jpg);
+  background-image: url(../img/hufflepuff.jpg);
   background-position: 1%;
 }
 
 .slytherin {
-  background-image: url(img/slytherin.jpg);
+  background-image: url(../img/slytherin.jpg);
   background-position: 1%;
 }
 
 .ravenclaw {
-  background-image: url(img/ravenclaw.jpg);
+  background-image: url(../img/ravenclaw.jpg);
   background-position: 1%;
 }
 
 .win {
-  background-image: url(img/winner.gif);
+  background-image: url(../img/winner.gif);
   background-position: 50%;
 }
 
 .loose {
-  background-image: url(img/giphy.gif);
+  background-image: url(../img/giphy.gif);
   background-position: 50%;
 }
 

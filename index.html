@@ -2,71 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ϟHarry Potter Trivia</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ϟHarry Potter Trivia</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="lumos">
-        <button id="lumos">LUMOS!</button>
-        <audio id="lumosMaxima" src="audio/lumosmaxima.mp3"></audio>
-    </div>
-    <div id="begin">
-        <div class="background" id="background">
-            <header>
-                <h1>Harry Potter Trivia</h1>
-                <h2>Pick a theme!</h2>
-                <div class="themes">
-                    <button id="gryffindor">Gryffindor</button>
-                    <audio class="gryffindor" src="audio/gryffindor.wav"></audio>
-                    <button id="hufflepuff">Hufflepuff</button>
-                    <audio class="hufflepuff" src="audio/hufflepuff.wav"></audio>
-                    <button id="slytherin">Slytherin</button>
-                    <audio class="slytherin" src="audio/slytherin.wav"></audio>
-                    <button id="ravenclaw">Ravenclaw</button>
-                    <audio class="ravenclaw" src="audio/ravenclaw.wav"></audio>
-                    <button id="dobby">Dobby</button>
-                    <audio class="dobby" src="audio/Hello.mp3"></audio>
-                    <button id="hogwarts">Hogwarts</button>
-                    <audio class="hogwarts" src="audio/wizard_harry.wav"></audio>
-                </div>
-            </header>
-            <div class="dropdown">
-                <span>Instructions</span>
-                <div class="dropdown-content">
-                    <p>Answer each question. Once you have answered all the questions click the submit button. you can slide
-                        between the different questions to see which ones you got correct or wrong. You must get 8 or more
-                        answers correct to win this game. Change the theme by pressing the buttons above! Enjoy!
-                    </p>
-                </div>
-            </div>
-            <div class="trivia-container">
-                <div id="trivia"></div>
-            </div>
-            <div class="buttons">
-                <button id="previous">☚ Previous Question</button>
-                <button id="next">Next Question ☛</button>
-                <button id="submit">Submit</button>
-                <audio id="mischief" src="audio/mischief.mp3"></audio>
-                <div id="results"></div>
-            </div>
-            <footer>
-                <div class="name"> © Simon Albani</div>
-                <div class="social">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-snapchat-square"></i>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="script.js"></script>
+	<div class="lumos">
+		<button id="lumos">LUMOS!</button>
+		<audio id="lumosMaxima" src="audio/lumosmaxima.mp3"></audio>
+	</div>
+	<div id="begin">
+		<div class="background" id="background">
+			<header>
+				<h1>Harry Potter Trivia</h1>
+				<h2>Pick a theme!</h2>
+				<div class="themes">
+					<button id="gryffindor">Gryffindor</button>
+					<audio class="gryffindor" src="audio/gryffindor.wav"></audio>
+					<button id="hufflepuff">Hufflepuff</button>
+					<audio class="hufflepuff" src="audio/hufflepuff.wav"></audio>
+					<button id="slytherin">Slytherin</button>
+					<audio class="slytherin" src="audio/slytherin.wav"></audio>
+					<button id="ravenclaw">Ravenclaw</button>
+					<audio class="ravenclaw" src="audio/ravenclaw.wav"></audio>
+					<button id="dobby">Dobby</button>
+					<audio class="dobby" src="audio/Hello.mp3"></audio>
+					<button id="hogwarts">Hogwarts</button>
+					<audio class="hogwarts" src="audio/wizard_harry.wav"></audio>
+				</div>
+			</header>
+			<div class="dropdown">
+				<span>Instructions</span>
+				<div class="dropdown-content">
+					<p>Answer each question. Once you have answered all the questions click the submit button. you can slide between the different
+						questions to see which ones you got correct or wrong. You must get 8 or more answers correct to win this game. Change
+						the theme by pressing the buttons above! Enjoy!
+					</p>
+				</div>
+			</div>
+			<div class="trivia-container">
+				<div id="trivia"></div>
+			</div>
+			<div class="buttons">
+				<button id="previous">☚ Previous Question</button>
+				<button id="next">Next Question ☛</button>
+				<button id="submit">Submit</button>
+				<audio id="mischief" src="audio/mischief.mp3"></audio>
+				<div id="results"></div>
+			</div>
+			<footer>
+				<div class="name"> © Simon Albani</div>
+				<div class="social">
+					<i class="fab fa-facebook-square"></i>
+					<i class="fab fa-linkedin"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-snapchat-square"></i>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script src="js/questions.js"></script>
+	<script src="js/themes.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
